@@ -38,3 +38,7 @@ next-env.d.ts
 /work/
 
 /.pnpm-store/
+
+# Local compiler and Sites workflow state
+*.tsbuildinfo
+.sites-runtime/
