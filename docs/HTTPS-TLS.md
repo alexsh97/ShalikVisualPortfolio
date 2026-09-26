@@ -73,3 +73,16 @@ openssl s_client -connect shalik-visual.shalik-visual.chatgpt.site:443 -serverna
 ```
 
 Authentication-gate responses establish only edge transport behavior. They do not complete application verification.
+
+## Final live verification results
+
+The private deployment subsequently **succeeded** at `https://shalik-visual.shalik-visual.chatgpt.site` during this audit. The initial “no live URL” observation above describes the state before this deployment.
+
+- Owner-authenticated GET checks passed for all **22** English/Polish public pages: HTTP 200, exactly one correct HTTPS canonical, CSP `upgrade-insecure-requests`, no HSTS header, and no HTTP `src`/`href` references in the rendered HTML.
+- Authenticated HTTPS requests passed for the logo, Figtree font, full showreel and contact API. No test enquiry was sent.
+- Edge HTTP redirects passed for the root with a query, a Polish service page with a query, the API, logo, font and video. Each returned **302** to the matching HTTPS URL without losing the path/query. Platform edge redirects take precedence over the Worker's fallback 308.
+- Static responses did not include the Worker's CSP header despite worker-first configuration in the packaged build. The hosting layer serves those resources separately. Their HTTP redirects and HTTPS delivery were verified directly; the document's CSP governs embedded resource upgrades. Do not rely on Worker headers alone for platform-served static assets.
+- Certificate-validated handshakes succeeded with TLS 1.2 (`ECDHE-ECDSA-AES128-GCM-SHA256`) and TLS 1.3 (`TLS_AES_256_GCM_SHA384`). Certificate SAN: `*.shalik-visual.chatgpt.site`; expiry: **2026-12-09 16:25:17 UTC**. TLS 1.0 and 1.1 attempts were rejected with protocol-version alerts.
+- Tests for redirect destinations, query preservation, loopback exemption, unknown canonical paths, all bilingual canonical combinations, contact behavior and TypeScript checking passed. The production build completed.
+
+Remaining scope limits: no custom hostname is attached; renewal cannot be demonstrated until the provider performs it; no exhaustive browser waterfall/third-party runtime-resource audit or origin-wide cipher suite scan was performed. HSTS remains disabled as requested. Keep it disabled until the operational checks above are completed and reviewed.
