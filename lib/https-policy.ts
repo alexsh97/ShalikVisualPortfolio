@@ -1,7 +1,7 @@
 // Current origin confirmed by the Sites edge redirect on 2026-09-26. Change only after a replacement
 // hostname is attached, certificate-active and independently verified.
 export const SITE_ORIGIN = 'https://shalik-visual.shalik-visual.chatgpt.site';
-const serviceSlugs = ['music-videos','commercials','short-films','documentaries','podcasts-videocasts','photography','editing-post-production','event-films'];
+const serviceSlugs = ['commercials','short-films','documentaries','podcasts-videocasts','photography','editing-post-production','event-films'];
 const publicPaths = new Set(['/', '/team', '/studio', '/partners', ...serviceSlugs.map(s=>'/offer/'+s)]);
 export function httpsRedirect(rawUrl: string, allowLocalHttp = false): string | null {
   const url = new URL(rawUrl);

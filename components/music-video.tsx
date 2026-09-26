@@ -1,3 +1,0 @@
-export default function MusicVideo({title, label, href}: {title:string; label:string; href?:string}) {
- return <figure className="portfolio-video"><div className="portfolio-video-player"><iframe src="https://www.youtube.com/embed/qvAsakVBwOk" title={title} width="560" height="315" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen /></div><figcaption className="card-label"><h3>{title}</h3>{href ? <a href={href}>{label} ↗</a> : <a href="https://www.youtube.com/watch?v=qvAsakVBwOk">{label} ↗</a>}</figcaption></figure>
-}
