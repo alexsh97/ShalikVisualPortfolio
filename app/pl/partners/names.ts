@@ -1,1 +1,2 @@
-export const clientNames = ['PZU', 'BNI', 'PKB', 'Cobin Angels'];
+export const clientNames = ['Fobos', 'Cobin Angels', 'Marsz Mocy', 'WHAI', 'Safe AI Germany', 'Repablo', 'Future Dilemmas'];
+export const businessClubs = ['PKB', 'BNI'];

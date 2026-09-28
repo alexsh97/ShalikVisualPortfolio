@@ -19,7 +19,7 @@ for(const file of files){
   if(ts.isJsxText(node)){let v=translate(node.text,true);if(v!==node.text)edits.push([node.pos,node.end,v]);}
   else if(ts.isStringLiteral(node)){
    let v=translate(node.text);
-   if(v===node.text && /^\/(?:#|offer\/|team$|studio$|partners$)/.test(v))v='/pl'+v;
+   if(v===node.text && /^\/(?:#|offer\/|team$|studio$|partners(?:#|$))/.test(v))v='/pl'+v;
    if(ts.isJsxAttribute(node.parent) && node.parent.name.getText(ast)==='href' && v==='/')v='/pl';
    if(file==='shared.tsx'&&v==='./language-switch')v='../language-switch';
    if(file==='shared.tsx'&&v==='./contact-form')v='../contact-form';
