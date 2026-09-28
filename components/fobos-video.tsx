@@ -1,0 +1,1 @@
+export default function FobosVideo(){return <div className="fobos-player"><iframe src="https://www.youtube.com/embed/qvAsakVBwOk" title="Fobos - Balerina" width="560" height="315" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen/></div>}
