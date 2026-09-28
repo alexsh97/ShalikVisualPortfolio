@@ -45,9 +45,13 @@ export default function Team() {
                   <div className="team-profile-heading"><h3>Oleksandr Shaforostov</h3><span className="team-role">Współzałożyciel · Operator filmowy · Fotograf</span></div>
                   <p>Oleksandr od ośmiu lat realizuje filmy, fotografuje i montuje. Łączy wiedzę inżynierską z artystycznym spojrzeniem, nadając różnorodnym projektom własny styl. Dba o techniczną precyzję i świadomie buduje obraz, w którym światło, kompozycja i rytm służą opowiadanej historii.</p>
                 </> : index === 1 ? <>
-                  <div className="team-portrait team-portrait-photo"><img src="/media/cofounder-producer.png" alt="Współzałożyciel i producent" loading="lazy" width="2075" height="3130"/><span className="team-photo-number" aria-hidden="true">02</span></div>
-                  <div className="team-profile-heading"><h3>Imię i nazwisko wkrótce</h3><span className="team-role">Współzałożyciel · Producent</span></div>
+                  <div className="team-portrait team-portrait-photo"><img src="/media/cofounder-producer.png" alt="Arkadiusz Pawlik" loading="lazy" width="2075" height="3130"/><span className="team-photo-number" aria-hidden="true">02</span></div>
+                  <div className="team-profile-heading"><h3>Arkadiusz Pawlik</h3><span className="team-role">Współzałożyciel · Producent</span></div>
                   <p>Od ośmiu lat zajmuje się zarządzaniem projektami, sprzedażą, organizacją wydarzeń i warsztatów. Otwarty na ludzi i nowe pomysły, łatwo znajduje wspólny język z osobami z różnych środowisk. Buduje trwałe relacje i łączy właściwych ludzi, aby zamieniać twórcze plany w realizacje.</p>
+                </> : index === 3 ? <>
+                  <div className="team-portrait team-portrait-photo"><img src="/media/natalia-pabijan.jpg" alt="Natalia Pabijan" loading="lazy" width="3921" height="5881"/><span className="team-photo-number" aria-hidden="true">04</span></div>
+                  <div className="team-profile-heading"><h3>Natalia Pabijan</h3><span className="team-role">Managerka Shalik Studio · Aktorka · Modelka · Kostiumy</span></div>
+                  <p>Natalia to absolwentka kierunku artystycznego, profesjonalna modelka i twarz Shalik Studio. Z pasją i zaangażowaniem zarządza studiem, występuje przed kamerą i zajmuje się kostiumami. Łączy artystyczną wrażliwość z energią na planie. Poza studiem chętnie oddaje się jeździe konnej.</p>
                 </> : <>
                 {index === 2 ? <div className="team-portrait team-portrait-photo"><img src="/media/aleksander-drozd.png" alt="Aleksander Drozd" loading="lazy" width="2075" height="3130"/><span className="team-photo-number" aria-hidden="true">03</span></div> : (
                 <div className="team-portrait" role="img" aria-label={`Portret członka zespołu ${index + 1} — wkrótce`}>
