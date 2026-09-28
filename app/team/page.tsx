@@ -54,10 +54,10 @@ export default function Team() {
                   <span className="eyebrow">PORTRAIT COMING SOON</span>
                 </div>
                 <div className="team-profile-heading">
-                  <h3>Name to be added</h3>
-                  <span className="team-role">{role ?? 'Role to be confirmed'}</span>
+                  <h3>{index === 2 ? 'Aleksander Drozd' : 'Name to be added'}</h3>
+                  <span className="team-role">{index === 2 ? 'Editor · Camera operator · Photographer · Co-founder' : role ?? 'Role to be confirmed'}</span>
                 </div>
-                <p>Personal introduction coming soon.</p>
+                <p>{index === 2 ? 'Aleksander is a young, ambitious camera operator and editor with a film school education in cinematography and editing. He brings a fresh perspective and creative solutions to the team, giving each project energy, a modern, visually engaging feel and a distinctive visual character.' : 'Personal introduction coming soon.'}</p>
                 </>}
               </article>
             ))}

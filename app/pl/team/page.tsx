@@ -54,10 +54,10 @@ export default function Team() {
                   <span className="eyebrow">PORTRET WKRÓTCE</span>
                 </div>
                 <div className="team-profile-heading">
-                  <h3>Imię i nazwisko wkrótce</h3>
-                  <span className="team-role">{role ?? "Rola do potwierdzenia"}</span>
+                  <h3>{index === 2 ? 'Aleksander Drozd' : "Imię i nazwisko wkrótce"}</h3>
+                  <span className="team-role">{index === 2 ? "Montażysta · Operator kamery · Fotograf · Współzałożyciel" : role ?? "Rola do potwierdzenia"}</span>
                 </div>
-                <p>Krótki opis wkrótce.</p>
+                <p>{index === 2 ? "Aleksander to młody, ambitny operator i montażysta, który ukończył szkołę filmową na kierunku sztuki operatorsko-montażowej. Wnosi do zespołu świeże spojrzenie i kreatywne rozwiązania, nadając projektom energię, nowoczesny charakter oraz autorski, wyrazisty styl wizualny." : "Krótki opis wkrótce."}</p>
                 </>}
               </article>
             ))}
