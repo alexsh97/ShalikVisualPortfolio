@@ -44,6 +44,10 @@ export default function Team() {
                   <div className="team-portrait team-portrait-photo"><img src="/media/oleksandr-shaforostov.png" alt="Oleksandr Shaforostov" loading="lazy" width="2075" height="3130"/><span className="team-photo-number" aria-hidden="true">01</span></div>
                   <div className="team-profile-heading"><h3>Oleksandr Shaforostov</h3><span className="team-role">Co-founder · Cinematographer · Photographer</span></div>
                   <p>With eight years of experience in videography, photography and editing, Oleksandr brings a distinctive visual style to every project. He combines engineering knowledge with an artist’s eye, balancing technical precision with creative expression.</p>
+                </> : index === 1 ? <>
+                  <div className="team-portrait team-portrait-photo"><img src="/media/cofounder-producer.png" alt="Co-founder and producer" loading="lazy" width="2075" height="3130"/><span className="team-photo-number" aria-hidden="true">02</span></div>
+                  <div className="team-profile-heading"><h3>Name to be added</h3><span className="team-role">Co-founder · Producer</span></div>
+                  <p>With eight years of experience in project management, sales, event organisation and workshops, he brings people and ideas together. Open-minded and approachable, he finds common ground with people from all walks of life, building lasting relationships and connecting the right people to make each project happen.</p>
                 </> : <>
                 <div className="team-portrait" role="img" aria-label={`Portrait to be added for team member ${index + 1}`}>
                   <span className="team-number" aria-hidden="true">{String(index + 1).padStart(2, '0')}</span>

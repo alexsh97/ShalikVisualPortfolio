@@ -44,6 +44,10 @@ export default function Team() {
                   <div className="team-portrait team-portrait-photo"><img src="/media/oleksandr-shaforostov.png" alt="Oleksandr Shaforostov" loading="lazy" width="2075" height="3130"/><span className="team-photo-number" aria-hidden="true">01</span></div>
                   <div className="team-profile-heading"><h3>Oleksandr Shaforostov</h3><span className="team-role">Współzałożyciel · Operator filmowy · Fotograf</span></div>
                   <p>Oleksandr ma osiem lat doświadczenia w realizacji filmów, fotografii i montażu. Każdemu projektowi nadaje własny, rozpoznawalny styl. Łączy wiedzę inżynierską z artystycznym spojrzeniem, znajdując równowagę między techniczną precyzją a twórczą ekspresją.</p>
+                </> : index === 1 ? <>
+                  <div className="team-portrait team-portrait-photo"><img src="/media/cofounder-producer.png" alt="Współzałożyciel i producent" loading="lazy" width="2075" height="3130"/><span className="team-photo-number" aria-hidden="true">02</span></div>
+                  <div className="team-profile-heading"><h3>Imię i nazwisko wkrótce</h3><span className="team-role">Współzałożyciel · Producent</span></div>
+                  <p>Od ośmiu lat łączy ludzi i pomysły, zdobywając doświadczenie w zarządzaniu projektami, sprzedaży, organizacji wydarzeń i warsztatów. Otwarty na nowe perspektywy, z łatwością znajduje wspólny język z osobami z różnych środowisk. Buduje trwałe relacje i łączy właściwych ludzi, aby wspólnie realizować projekty.</p>
                 </> : <>
                 <div className="team-portrait" role="img" aria-label={`Portret członka zespołu ${index + 1} — wkrótce`}>
                   <span className="team-number" aria-hidden="true">{String(index + 1).padStart(2, '0')}</span>
