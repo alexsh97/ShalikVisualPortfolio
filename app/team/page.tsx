@@ -60,10 +60,10 @@ export default function Team() {
                 </div>
                 )}
                 <div className="team-profile-heading">
-                  <h3>{index === 2 ? 'Aleksander Drozd' : 'Name to be added'}</h3>
-                  <span className="team-role">{index === 2 ? 'Editor · Camera operator · Photographer · Co-founder' : role ?? 'Role to be confirmed'}</span>
+                  <h3>{index === 2 ? 'Aleksander Drozd' : index === 4 ? 'Gabriele Giglio' : 'Name to be added'}</h3>
+                  <span className="team-role">{index === 2 ? 'Editor · Camera operator · Photographer · Co-founder' : index === 4 ? '3D Digital Designer · VR · AR' : role ?? 'Role to be confirmed'}</span>
                 </div>
-                <p>{index === 2 ? 'Aleksander is a young, ambitious camera operator and editor with a film school education in cinematography and editing. He brings a fresh perspective and creative solutions to the team, giving each project energy, a modern, visually engaging feel and a distinctive visual character.' : 'Personal introduction coming soon.'}</p>
+                <p>{index === 2 ? 'Aleksander is a young, ambitious camera operator and editor with a film school education in cinematography and editing. He brings a fresh perspective and creative solutions to the team, giving each project energy, a modern, visually engaging feel and a distinctive visual character.' : index === 4 ? 'Gabriele creates 3D models, textures, rigs and animation for immersive VR, AR and XR. His work spans stereoscopy, autostereoscopy, lenticular and holographic visuals, video editing and post-production. He also composes and arranges music, and develops 3D prints and prototypes.' : 'Personal introduction coming soon.'}</p>
                 </>}
               </article>
             ))}

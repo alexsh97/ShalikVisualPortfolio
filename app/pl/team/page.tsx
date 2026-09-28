@@ -60,10 +60,10 @@ export default function Team() {
                 </div>
                 )}
                 <div className="team-profile-heading">
-                  <h3>{index === 2 ? 'Aleksander Drozd' : "Imię i nazwisko wkrótce"}</h3>
-                  <span className="team-role">{index === 2 ? "Montażysta · Operator kamery · Fotograf · Współzałożyciel" : role ?? "Rola do potwierdzenia"}</span>
+                  <h3>{index === 2 ? 'Aleksander Drozd' : index === 4 ? 'Gabriele Giglio' : "Imię i nazwisko wkrótce"}</h3>
+                  <span className="team-role">{index === 2 ? "Montażysta · Operator kamery · Fotograf · Współzałożyciel" : index === 4 ? "Projektant 3D · VR · AR" : role ?? "Rola do potwierdzenia"}</span>
                 </div>
-                <p>{index === 2 ? "Aleksander to młody, ambitny operator i montażysta, który ukończył szkołę filmową na kierunku sztuki operatorsko-montażowej. Wnosi do zespołu świeże spojrzenie i kreatywne rozwiązania, nadając projektom energię, nowoczesny charakter oraz autorski, wyrazisty styl wizualny." : "Krótki opis wkrótce."}</p>
+                <p>{index === 2 ? "Aleksander to młody, ambitny operator i montażysta, który ukończył szkołę filmową na kierunku sztuki operatorsko-montażowej. Wnosi do zespołu świeże spojrzenie i kreatywne rozwiązania, nadając projektom energię, nowoczesny charakter oraz autorski, wyrazisty styl wizualny." : index === 4 ? "Gabriele tworzy modele 3D, tekstury, rigging i animacje dla VR, AR i XR. Zajmuje się również stereoskopią, autostereoskopią, obrazem lentikularnym i holograficznym, montażem oraz postprodukcją. Komponuje i aranżuje autorską muzykę, a także realizuje druk 3D i nowe prototypy." : "Krótki opis wkrótce."}</p>
                 </>}
               </article>
             ))}
