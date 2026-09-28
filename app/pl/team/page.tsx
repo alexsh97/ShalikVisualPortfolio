@@ -36,10 +36,15 @@ export default function Team() {
             <h2 id="team-heading">Ludzie stojący za obrazem.</h2>
             <span className="eyebrow">POZNAJ SHALIK VISUAL</span>
           </div>
-          <p className="team-draft-note">Przygotowujemy profile zespołu. Wkrótce dodamy imiona, portrety i krótkie opisy.</p>
+          <p className="team-draft-note">Poznaj nasz zespół. Kolejne portrety i sylwetki pojawią się wkrótce.</p>
           <div className="team-grid">
             {profiles.map((role, index) => (
               <article className="team-card" key={index}>
+                {index === 0 ? <>
+                  <div className="team-portrait team-portrait-photo"><img src="/media/oleksandr-shaforostov.png" alt="Oleksandr Shaforostov" loading="lazy" width="2075" height="3130"/><span className="team-photo-number" aria-hidden="true">01</span></div>
+                  <div className="team-profile-heading"><h3>Oleksandr Shaforostov</h3><span className="team-role">Współzałożyciel · Operator filmowy · Fotograf</span></div>
+                  <p>Oleksandr ma osiem lat doświadczenia w realizacji filmów, fotografii i montażu. Każdemu projektowi nadaje własny, rozpoznawalny styl. Łączy wiedzę inżynierską z artystycznym spojrzeniem, znajdując równowagę między techniczną precyzją a twórczą ekspresją.</p>
+                </> : <>
                 <div className="team-portrait" role="img" aria-label={`Portret członka zespołu ${index + 1} — wkrótce`}>
                   <span className="team-number" aria-hidden="true">{String(index + 1).padStart(2, '0')}</span>
                   <span className="eyebrow">PORTRET WKRÓTCE</span>
@@ -49,6 +54,7 @@ export default function Team() {
                   <span className="team-role">{role ?? "Rola do potwierdzenia"}</span>
                 </div>
                 <p>Krótki opis wkrótce.</p>
+                </>}
               </article>
             ))}
           </div>

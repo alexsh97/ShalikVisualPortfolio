@@ -36,10 +36,15 @@ export default function Team() {
             <h2 id="team-heading">The people behind the picture.</h2>
             <span className="eyebrow">MEET SHALIK VISUAL</span>
           </div>
-          <p className="team-draft-note">Team profiles are being prepared. Names, portraits and personal introductions will be added soon.</p>
+          <p className="team-draft-note">Meet our team. More portraits and introductions are coming soon.</p>
           <div className="team-grid">
             {profiles.map((role, index) => (
               <article className="team-card" key={index}>
+                {index === 0 ? <>
+                  <div className="team-portrait team-portrait-photo"><img src="/media/oleksandr-shaforostov.png" alt="Oleksandr Shaforostov" loading="lazy" width="2075" height="3130"/><span className="team-photo-number" aria-hidden="true">01</span></div>
+                  <div className="team-profile-heading"><h3>Oleksandr Shaforostov</h3><span className="team-role">Co-founder · Cinematographer · Photographer</span></div>
+                  <p>With eight years of experience in videography, photography and editing, Oleksandr brings a distinctive visual style to every project. He combines engineering knowledge with an artist’s eye, balancing technical precision with creative expression.</p>
+                </> : <>
                 <div className="team-portrait" role="img" aria-label={`Portrait to be added for team member ${index + 1}`}>
                   <span className="team-number" aria-hidden="true">{String(index + 1).padStart(2, '0')}</span>
                   <span className="eyebrow">PORTRAIT COMING SOON</span>
@@ -49,6 +54,7 @@ export default function Team() {
                   <span className="team-role">{role ?? 'Role to be confirmed'}</span>
                 </div>
                 <p>Personal introduction coming soon.</p>
+                </>}
               </article>
             ))}
           </div>
