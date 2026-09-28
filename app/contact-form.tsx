@@ -15,7 +15,7 @@ export default function ContactForm() {
  const id = useRef(''); const busy = useRef(false);
  useEffect(()=>{const controller = new AbortController();fetch('/api/contact',{signal:controller.signal}).then(r=>r.ok?r.json():{available:false}).then(data=>setAvailable(Boolean(data && typeof data === 'object' && 'available' in data && data.available === true))).catch(()=>{if(!controller.signal.aborted)setAvailable(false)});return ()=>controller.abort()},[]);
  function change(field: keyof typeof values,value:string){setValues(v=>({...v,[field]:value}));id.current='';setState('idle')}
- function openDraft(){const text=`${t.name}: ${values.name}\n${t.email}: ${values.email}\n\n${values.message}`;window.location.href=`mailto:contact@shalikvisual.com?subject=${encodeURIComponent(t.subject)}&body=${encodeURIComponent(text)}`;setState('opened')}
+ function openDraft(){const text=`${t.name}: ${values.name}\n${t.email}: ${values.email}\n\n${values.message}`;window.location.href=`mailto:shalik.visual@gmail.com?subject=${encodeURIComponent(t.subject)}&body=${encodeURIComponent(text)}`;setState('opened')}
  async function submit(e:FormEvent<HTMLFormElement>){
   e.preventDefault(); if(busy.current)return;
   if(!values.name.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(values.email.trim()) || values.message.trim().length<10){setState('invalid');return}

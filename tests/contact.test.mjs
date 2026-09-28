@@ -7,7 +7,7 @@ const data={name:'Test Client',email:'client@example.com',message:'I would like 
 const req=(body=data,origin='https://example.test')=>new Request('https://example.test/api/contact',{method:'POST',headers:{origin,'content-type':'application/json'},body:JSON.stringify(body)});
 const config={RESEND_API_KEY:'test-only',CONTACT_FROM_EMAIL:'Studio <studio@example.com>'};
 let calls=0;
-const send=async(url,options)=>{calls++;assert.equal(url,'https://api.resend.com/emails');const mail=JSON.parse(options.body);assert.deepEqual(mail.to,['contact@shalikvisual.com']);assert.equal(mail.reply_to,data.email);assert.ok(mail.text.includes(data.message));assert.equal(options.headers['Idempotency-Key'],'contact-'+data.id);return Response.json({id:'provider-test-id'})};
+const send=async(url,options)=>{calls++;assert.equal(url,'https://api.resend.com/emails');const mail=JSON.parse(options.body);assert.deepEqual(mail.to,['shalik.visual@gmail.com']);assert.equal(mail.reply_to,data.email);assert.ok(mail.text.includes(data.message));assert.equal(options.headers['Idempotency-Key'],'contact-'+data.id);return Response.json({id:'provider-test-id'})};
 assert.equal((await handleContact(req({...data,email:'bad'}),config,send)).status,400);
 assert.equal((await handleContact(req({...data,message:'short'}),config,send)).status,400);
 assert.equal((await handleContact(req({...data,website:'spam'}),config,send)).status,400);

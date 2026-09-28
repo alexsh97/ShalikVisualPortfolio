@@ -35,7 +35,7 @@ export async function handleContact(request: Request, config: MailConfig, send: 
     const response = await send('https://api.resend.com/emails', {
       method: 'POST',
       headers: { Authorization: `Bearer ${config.RESEND_API_KEY}`, 'Content-Type': 'application/json', 'Idempotency-Key': `contact-${id}` },
-      body: JSON.stringify({ from: config.CONTACT_FROM_EMAIL, to: ['contact@shalikvisual.com'], reply_to: email, subject: `Shalik Visual — ${payload.locale === 'pl' ? 'Nowe zapytanie' : 'New project enquiry'}`, text: `Name / Imię: ${name}\nEmail: ${email}\n\n${message}` }),
+      body: JSON.stringify({ from: config.CONTACT_FROM_EMAIL, to: ['shalik.visual@gmail.com'], reply_to: email, subject: `Shalik Visual — ${payload.locale === 'pl' ? 'Nowe zapytanie' : 'New project enquiry'}`, text: `Name / Imię: ${name}\nEmail: ${email}\n\n${message}` }),
       signal: AbortSignal.timeout(15000),
     });
     if (!response.ok) return json({ error: 'delivery_failed' }, 502);
