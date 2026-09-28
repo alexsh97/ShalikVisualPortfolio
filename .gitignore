@@ -42,3 +42,5 @@ next-env.d.ts
 # Local compiler and Sites workflow state
 *.tsbuildinfo
 .sites-runtime/
+
+.netlify/

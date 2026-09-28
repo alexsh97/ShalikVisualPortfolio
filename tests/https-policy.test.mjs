@@ -20,5 +20,5 @@ for(const path of ['/','/team','/studio','/partners',...['commercials','short-fi
 assert.equal(canonicalAlternates('//evil.test'),undefined);
 assert.equal(canonicalAlternates('/api/contact'),undefined);
 assert.equal(canonicalAlternates('/missing'),undefined);
-assert.ok(!readFileSync('worker.ts','utf8').includes('Strict-Transport-Security'));
+assert.ok(!readFileSync('next.config.ts','utf8').includes('Strict-Transport-Security'));
 console.log('HTTPS policy tests passed: all route types, local-only exception, host injection, 22 bilingual canonicals, no HSTS.');

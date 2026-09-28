@@ -1,0 +1,11 @@
+[build]
+  command = "pnpm run build"
+  publish = ".next"
+
+[build.environment]
+  NODE_VERSION = "22"
+  NEXT_TELEMETRY_DISABLED = "1"
+
+# Netlify automatically installs its Next.js adapter.
+# TLS and HTTP-to-HTTPS redirects are managed at the Netlify edge.
+# Do not enable HSTS until the production hostname has been verified.

@@ -1,6 +1,8 @@
-// Current origin confirmed by the Sites edge redirect on 2026-09-26. Change only after a replacement
-// hostname is attached, certificate-active and independently verified.
-export const SITE_ORIGIN = 'https://shalik-visual.shalik-visual.chatgpt.site';
+// Build-time production origin: Netlify supplies URL; SITE_URL overrides it for a custom domain.
+const configuredOrigin = process.env.SITE_URL || process.env.URL || 'https://localhost:3000';
+const origin = new URL(configuredOrigin);
+if (origin.protocol !== 'https:' || origin.username || origin.password) throw new Error('SITE_URL must be an HTTPS origin');
+export const SITE_ORIGIN = origin.origin;
 const serviceSlugs = ['music-videos','commercials','short-films','documentaries','podcasts-videocasts','photography','editing-post-production','event-films'];
 const publicPaths = new Set(['/', '/team', '/studio', '/partners', ...serviceSlugs.map(s=>'/offer/'+s)]);
 export function httpsRedirect(rawUrl: string, allowLocalHttp = false): string | null {

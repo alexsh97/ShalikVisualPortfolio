@@ -1,3 +1,5 @@
+> Historical audit of the previous Sites deployment. For the current Next.js/Netlify setup, see [NETLIFY-SETUP.md](../NETLIFY-SETUP.md). Production Netlify HTTPS must be verified after deployment.
+
 # HTTPS and TLS audit — Shalik Visual
 
 Audit date: 2026-09-26 (Europe/Warsaw).
