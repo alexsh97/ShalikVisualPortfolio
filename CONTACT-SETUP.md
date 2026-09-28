@@ -1,6 +1,6 @@
 # Contact form delivery
 
-The English and Polish contact sections share one form. Submissions are sent server-side to kontakt@shalik.pl using Resend. The visitor's address is Reply-To; the destination cannot be changed by the browser.
+The English and Polish contact sections share one form. Submissions are sent server-side to contact@shalikvisual.com using Resend. The visitor's address is Reply-To; the destination cannot be changed by the browser.
 
 Set these server-only runtime variables after configuring a sending domain in Resend:
 

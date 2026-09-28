@@ -17,7 +17,7 @@ Set these in Netlify project configuration, never in Git:
 - `RESEND_API_KEY`: server-side Resend key, available to Functions.
 - `CONTACT_FROM_EMAIL`: sender address on a domain verified in Resend, available to Functions.
 
-The current contact handler sends to `kontakt@shalik.pl`. No email credentials have been transferred from the previous host or validated against Resend during this migration. Without configuration the form reports unavailability and offers its email fallback. Test real delivery after configuration.
+The current contact handler sends to `contact@shalikvisual.com`. No email credentials have been transferred from the previous host or validated against Resend during this migration. Without configuration the form reports unavailability and offers its email fallback. Test real delivery after configuration.
 
 ## HTTPS and certificates
 
