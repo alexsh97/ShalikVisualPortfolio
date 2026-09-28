@@ -49,10 +49,12 @@ export default function Team() {
                   <div className="team-profile-heading"><h3>Imię i nazwisko wkrótce</h3><span className="team-role">Współzałożyciel · Producent</span></div>
                   <p>Od ośmiu lat zajmuje się zarządzaniem projektami, sprzedażą, organizacją wydarzeń i warsztatów. Otwarty na ludzi i nowe pomysły, łatwo znajduje wspólny język z osobami z różnych środowisk. Buduje trwałe relacje i łączy właściwych ludzi, aby zamieniać twórcze plany w realizacje.</p>
                 </> : <>
+                {index === 2 ? <div className="team-portrait team-portrait-photo"><img src="/media/aleksander-drozd.png" alt="Aleksander Drozd" loading="lazy" width="2075" height="3130"/><span className="team-photo-number" aria-hidden="true">03</span></div> : (
                 <div className="team-portrait" role="img" aria-label={`Portret członka zespołu ${index + 1} — wkrótce`}>
                   <span className="team-number" aria-hidden="true">{String(index + 1).padStart(2, '0')}</span>
                   <span className="eyebrow">PORTRET WKRÓTCE</span>
                 </div>
+                )}
                 <div className="team-profile-heading">
                   <h3>{index === 2 ? 'Aleksander Drozd' : "Imię i nazwisko wkrótce"}</h3>
                   <span className="team-role">{index === 2 ? "Montażysta · Operator kamery · Fotograf · Współzałożyciel" : role ?? "Rola do potwierdzenia"}</span>

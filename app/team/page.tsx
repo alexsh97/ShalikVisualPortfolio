@@ -49,10 +49,12 @@ export default function Team() {
                   <div className="team-profile-heading"><h3>Name to be added</h3><span className="team-role">Co-founder · Producer</span></div>
                   <p>With eight years in project management, sales, events and workshops, he connects people and ideas. Open-minded and approachable, he finds common ground across backgrounds, builds lasting relationships and brings the right people together to turn creative plans into productions.</p>
                 </> : <>
+                {index === 2 ? <div className="team-portrait team-portrait-photo"><img src="/media/aleksander-drozd.png" alt="Aleksander Drozd" loading="lazy" width="2075" height="3130"/><span className="team-photo-number" aria-hidden="true">03</span></div> : (
                 <div className="team-portrait" role="img" aria-label={`Portrait to be added for team member ${index + 1}`}>
                   <span className="team-number" aria-hidden="true">{String(index + 1).padStart(2, '0')}</span>
                   <span className="eyebrow">PORTRAIT COMING SOON</span>
                 </div>
+                )}
                 <div className="team-profile-heading">
                   <h3>{index === 2 ? 'Aleksander Drozd' : 'Name to be added'}</h3>
                   <span className="team-role">{index === 2 ? 'Editor · Camera operator · Photographer · Co-founder' : role ?? 'Role to be confirmed'}</span>
