@@ -53,7 +53,7 @@ export default function Team() {
                   <div className="team-profile-heading"><h3>Natalia Pabijan</h3><span className="team-role">Managerka Shalik Studio · Aktorka · Modelka · Kostiumy</span></div>
                   <p>Natalia to absolwentka kierunku artystycznego, profesjonalna modelka i twarz Shalik Studio. Z pasją i zaangażowaniem zarządza studiem, występuje przed kamerą i zajmuje się kostiumami. Łączy artystyczną wrażliwość z energią na planie. Poza studiem chętnie oddaje się jeździe konnej.</p>
                 </> : <>
-                {index === 2 ? <div className="team-portrait team-portrait-photo"><img src="/media/aleksander-drozd.png" alt="Aleksander Drozd" loading="lazy" width="2075" height="3130"/><span className="team-photo-number" aria-hidden="true">03</span></div> : (
+                {index === 2 ? <div className="team-portrait team-portrait-photo"><img src="/media/aleksander-drozd.png" alt="Aleksander Drozd" loading="lazy" width="2075" height="3130"/><span className="team-photo-number" aria-hidden="true">03</span></div> : index === 4 ? <div className="team-portrait team-portrait-photo"><img src="/media/gabriele-giglio.jpeg" alt="Gabriele Giglio" loading="lazy" width="800" height="800"/><span className="team-photo-number" aria-hidden="true">05</span></div> : (
                 <div className="team-portrait" role="img" aria-label={`Portret członka zespołu ${index + 1} — wkrótce`}>
                   <span className="team-number" aria-hidden="true">{String(index + 1).padStart(2, '0')}</span>
                   <span className="eyebrow">PORTRET WKRÓTCE</span>

@@ -53,7 +53,7 @@ export default function Team() {
                   <div className="team-profile-heading"><h3>Natalia Pabijan</h3><span className="team-role">Shalik Studio Manager · Actress · Model · Costumes</span></div>
                   <p>Natalia is an arts graduate, professional model and the face of Shalik Studio. She brings passion and commitment to managing the studio, acting and costume work, combining artistic sensitivity with creative energy on set. Away from the studio, she enjoys spending time in the saddle.</p>
                 </> : <>
-                {index === 2 ? <div className="team-portrait team-portrait-photo"><img src="/media/aleksander-drozd.png" alt="Aleksander Drozd" loading="lazy" width="2075" height="3130"/><span className="team-photo-number" aria-hidden="true">03</span></div> : (
+                {index === 2 ? <div className="team-portrait team-portrait-photo"><img src="/media/aleksander-drozd.png" alt="Aleksander Drozd" loading="lazy" width="2075" height="3130"/><span className="team-photo-number" aria-hidden="true">03</span></div> : index === 4 ? <div className="team-portrait team-portrait-photo"><img src="/media/gabriele-giglio.jpeg" alt="Gabriele Giglio" loading="lazy" width="800" height="800"/><span className="team-photo-number" aria-hidden="true">05</span></div> : (
                 <div className="team-portrait" role="img" aria-label={`Portrait to be added for team member ${index + 1}`}>
                   <span className="team-number" aria-hidden="true">{String(index + 1).padStart(2, '0')}</span>
                   <span className="eyebrow">PORTRAIT COMING SOON</span>
