@@ -31,6 +31,7 @@ for(const file of files){
  let out=source;for(const [start,end,text] of edits.sort((a,b)=>b[0]-a[0]))out=out.slice(0,start)+text+out.slice(end);
  out=out.replace('Portrait to be added for team member ${index + 1}','Portret członka zespołu ${index + 1} — wkrótce');
  if(file==='offer/services.ts')out=out.slice(0,out.indexOf('export function enquiry'))+`export function enquiry(name:string){return \`mailto:contact@shalikvisual.com?subject=\${encodeURIComponent(name+' — zapytanie o projekt')}&body=\${encodeURIComponent('Dzień dobry Shalik Visual,\\n\\nCel projektu:\\nOdbiorcy i kanały komunikacji:\\nMateriały końcowe:\\nPreferowany termin:\\nLokalizacja:\\nOrientacyjny budżet:\\n\\nDziękuję!')}\`}\n`;
+ if(file==='studio/page.tsx')out=out.replace('<StudioContent/>','<StudioContent locale="pl"/>');
  out=out.replaceAll('Studio%20booking%20enquiry','Zapytanie%20o%20studio').replaceAll('Studio%20photos%20and%20floor%20plan','Zdjecia%20i%20plan%20studia').replaceAll('Studio%20quote%20request','Wycena%20studia').replaceAll('Partnership%20enquiry','Zapytanie%20o%20wspolprace').replaceAll('Let%E2%80%99s%20collaborate','Porozmawiajmy%20o%20wspolpracy');
  const target='app/pl/'+file;fs.mkdirSync(path.dirname(target),{recursive:true});fs.writeFileSync(target,out);
 }
