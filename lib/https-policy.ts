@@ -4,7 +4,7 @@ const origin = new URL(configuredOrigin);
 if (origin.protocol !== 'https:' || origin.username || origin.password) throw new Error('SITE_URL must be an HTTPS origin');
 export const SITE_ORIGIN = origin.origin;
 const serviceSlugs = ['music-videos','commercials','short-films','documentaries','podcasts-videocasts','photography','editing-post-production','event-films'];
-const publicPaths = new Set(['/', '/team', '/studio', '/partners', ...serviceSlugs.map(s=>'/offer/'+s)]);
+const publicPaths = new Set(['/', '/team', '/studio', '/talent', '/partners', ...serviceSlugs.map(s=>'/offer/'+s)]);
 export function httpsRedirect(rawUrl: string, allowLocalHttp = false): string | null {
   const url = new URL(rawUrl);
   const local = ['localhost', '127.0.0.1', '[::1]'].includes(url.hostname);
