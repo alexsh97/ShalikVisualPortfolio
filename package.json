@@ -11,7 +11,7 @@
     "start": "next start",
     "lint": "oxlint",
     "format": "oxfmt",
-    "test": "node tests/contact.test.mjs && node tests/https-policy.test.mjs"
+    "test": "node tests/contact.test.mjs && node tests/contact-forms.test.mjs && node tests/https-policy.test.mjs"
   },
   "dependencies": {
     "@base-ui/react": "1.7.0",
