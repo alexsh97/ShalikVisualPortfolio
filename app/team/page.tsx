@@ -41,11 +41,11 @@ export default function Team() {
             {profiles.map((role, index) => (
               <article className="team-card" key={index}>
                 {index === 0 ? <>
-                  <div className="team-portrait team-portrait-photo"><img src="/media/oleksandr-shaforostov.png" alt="Oleksandr Shaforostov" loading="lazy" width="2075" height="3130"/><span className="team-photo-number" aria-hidden="true">01</span></div>
+                  <div className="team-portrait team-portrait-photo"><img src="/media/oleksandr-shaforostov.jpg" alt="Oleksandr Shaforostov" loading="lazy" width="853" height="1280"/><span className="team-photo-number" aria-hidden="true">01</span></div>
                   <div className="team-profile-heading"><h3>Oleksandr Shaforostov</h3><span className="team-role">Co-founder · Cinematographer · Photographer</span></div>
                   <p>Oleksandr brings eight years of experience in filmmaking, photography and editing to every production. Combining engineering knowledge with an artistic eye, he gives projects a distinctive visual style, balancing technical precision with a thoughtful approach to storytelling.</p>
                 </> : index === 1 ? <>
-                  <div className="team-portrait team-portrait-photo"><img src="/media/cofounder-producer.png" alt="Arkadiusz Pawlik" loading="lazy" width="2075" height="3130"/><span className="team-photo-number" aria-hidden="true">02</span></div>
+                  <div className="team-portrait team-portrait-photo"><img src="/media/arkadiusz-pawlik.jpg" alt="Arkadiusz Pawlik" loading="lazy" width="2680" height="4016"/><span className="team-photo-number" aria-hidden="true">02</span></div>
                   <div className="team-profile-heading"><h3>Arkadiusz Pawlik</h3><span className="team-role">Co-founder · Producer</span></div>
                   <p>With eight years in project management, sales, events and workshops, he connects people and ideas. Open-minded and approachable, he finds common ground across backgrounds, builds lasting relationships and brings the right people together to turn creative plans into productions.</p>
                 </> : index === 3 ? <>

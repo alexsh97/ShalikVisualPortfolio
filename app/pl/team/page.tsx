@@ -41,11 +41,11 @@ export default function Team() {
             {profiles.map((role, index) => (
               <article className="team-card" key={index}>
                 {index === 0 ? <>
-                  <div className="team-portrait team-portrait-photo"><img src="/media/oleksandr-shaforostov.png" alt="Oleksandr Shaforostov" loading="lazy" width="2075" height="3130"/><span className="team-photo-number" aria-hidden="true">01</span></div>
+                  <div className="team-portrait team-portrait-photo"><img src="/media/oleksandr-shaforostov.jpg" alt="Oleksandr Shaforostov" loading="lazy" width="853" height="1280"/><span className="team-photo-number" aria-hidden="true">01</span></div>
                   <div className="team-profile-heading"><h3>Oleksandr Shaforostov</h3><span className="team-role">Współzałożyciel · Operator filmowy · Fotograf</span></div>
                   <p>Oleksandr od ośmiu lat realizuje filmy, fotografuje i montuje. Łączy wiedzę inżynierską z artystycznym spojrzeniem, nadając różnorodnym projektom własny styl. Dba o techniczną precyzję i świadomie buduje obraz, w którym światło, kompozycja i rytm służą opowiadanej historii.</p>
                 </> : index === 1 ? <>
-                  <div className="team-portrait team-portrait-photo"><img src="/media/cofounder-producer.png" alt="Arkadiusz Pawlik" loading="lazy" width="2075" height="3130"/><span className="team-photo-number" aria-hidden="true">02</span></div>
+                  <div className="team-portrait team-portrait-photo"><img src="/media/arkadiusz-pawlik.jpg" alt="Arkadiusz Pawlik" loading="lazy" width="2680" height="4016"/><span className="team-photo-number" aria-hidden="true">02</span></div>
                   <div className="team-profile-heading"><h3>Arkadiusz Pawlik</h3><span className="team-role">Współzałożyciel · Producent</span></div>
                   <p>Od ośmiu lat zajmuje się zarządzaniem projektami, sprzedażą, organizacją wydarzeń i warsztatów. Otwarty na ludzi i nowe pomysły, łatwo znajduje wspólny język z osobami z różnych środowisk. Buduje trwałe relacje i łączy właściwych ludzi, aby zamieniać twórcze plany w realizacje.</p>
                 </> : index === 3 ? <>
