@@ -60,6 +60,10 @@ export default function Team() {
                   <div className="team-portrait team-portrait-photo"><img src="/media/adam-burkiewicz.jpg" alt="Adam Burkiewicz" loading="lazy" width="3024" height="4032"/><span className="team-photo-number" aria-hidden="true">07</span></div>
                   <div className="team-profile-heading"><h3>Adam Burkiewicz</h3><span className="team-role">Camera operator · Photographer · Drone operator</span></div>
                   <p>Adam is a young, ambitious filmmaker who works behind the camera, flies drones and edits footage. He combines photography with hands-on technical support on location. Beyond production, he actively serves with the Volunteer Fire Brigade in Połomia Duża, bringing commitment to both roles.</p>
+                </> : index === 7 ? <>
+                  <div className="team-portrait team-portrait-photo"><img src="/media/vlad-revich.jpg" alt="Vlad Revich" loading="lazy" width="4603" height="3069"/><span className="team-photo-number" aria-hidden="true">08</span></div>
+                  <div className="team-profile-heading"><h3>Vlad Revich</h3><span className="team-role">Cinematographer · Photographer · Editor</span></div>
+                  <p>Vlad is a talented cinematographer, photographer and editor with a distinctive way of seeing the world. He combines his creative perspective with each client's vision, shaping their story through thoughtful framing, expressive imagery and editing that brings it all together.</p>
                 </> : <>
                 {index === 2 ? <div className="team-portrait team-portrait-photo"><img src="/media/aleksander-drozd.png" alt="Aleksander Drozd" loading="lazy" width="2075" height="3130"/><span className="team-photo-number" aria-hidden="true">03</span></div> : index === 4 ? <div className="team-portrait team-portrait-photo"><img src="/media/gabriele-giglio.jpeg" alt="Gabriele Giglio" loading="lazy" width="800" height="800"/><span className="team-photo-number" aria-hidden="true">05</span></div> : (
                 <div className="team-portrait" role="img" aria-label={`Portrait to be added for team member ${index + 1}`}>

@@ -60,6 +60,10 @@ export default function Team() {
                   <div className="team-portrait team-portrait-photo"><img src="/media/adam-burkiewicz.jpg" alt="Adam Burkiewicz" loading="lazy" width="3024" height="4032"/><span className="team-photo-number" aria-hidden="true">07</span></div>
                   <div className="team-profile-heading"><h3>Adam Burkiewicz</h3><span className="team-role">Operator kamery · Fotograf · Operator drona</span></div>
                   <p>Adam to młody, ambitny filmowiec, operator kamery i drona oraz fotograf. Zajmuje się także montażem, a w terenie wspiera ekipę od strony technicznej. Poza planem aktywnie służy w Ochotniczej Straży Pożarnej w Połomi Dużej, łącząc pasję do obrazu z zaangażowaniem w pomoc innym.</p>
+                </> : index === 7 ? <>
+                  <div className="team-portrait team-portrait-photo"><img src="/media/vlad-revich.jpg" alt="Vlad Revich" loading="lazy" width="4603" height="3069"/><span className="team-photo-number" aria-hidden="true">08</span></div>
+                  <div className="team-profile-heading"><h3>Vlad Revich</h3><span className="team-role">Operator · Fotograf · Montażysta</span></div>
+                  <p>Vlad to utalentowany operator, fotograf i montażysta o własnym spojrzeniu na świat. Łączy autorską wrażliwość z wizją i oczekiwaniami klienta, opowiadając jego historię poprzez przemyślane kadry, wyraziste obrazy i montaż, który nadaje całości rytm i spójny charakter.</p>
                 </> : <>
                 {index === 2 ? <div className="team-portrait team-portrait-photo"><img src="/media/aleksander-drozd.png" alt="Aleksander Drozd" loading="lazy" width="2075" height="3130"/><span className="team-photo-number" aria-hidden="true">03</span></div> : index === 4 ? <div className="team-portrait team-portrait-photo"><img src="/media/gabriele-giglio.jpeg" alt="Gabriele Giglio" loading="lazy" width="800" height="800"/><span className="team-photo-number" aria-hidden="true">05</span></div> : (
                 <div className="team-portrait" role="img" aria-label={`Portret członka zespołu ${index + 1} — wkrótce`}>
